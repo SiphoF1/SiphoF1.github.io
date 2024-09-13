@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sipho Fako - Freelance Services & Rate Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      filter: blur(5px);
+    }
+
+    .container {
+      flex: 1;
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow-y: auto;
+      max-height: 80vh;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid #4a4ea6;
+    }
+
+    h1 {
+      color: #4a4ea6;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #f76c6c;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .service-group {
+      margin-bottom: 25px;
+    }
+
+    .service {
+      background-color: #fffcf7;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .included, .added-value {
+      text-align: center;
+      font-style: italic;
+      color: #6c757d;
+      margin: 10px 0;
+    }
+
+    .service-details {
+      text-align: justify;
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #4a4ea6;
+      color: white;
+      font-size: 1rem;
+      font-family: Arial, serif;
+    }
+
+    .footer a {
+      color: #f9a825;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Adjustments to fit content on one page */
+    .service h2 {
+      font-size: 1.3rem;
+    }
+
+    .service p {
+      font-size: 0.9rem;
+    }
+
+    .included, .added-value {
+      font-size: 0.9rem;
+    }
+
+    h2 {
+      margin-bottom: 5px;
+    }
+
+    .container {
+      padding: 10px 15px;
+    }
+
+    .service {
+      padding: 10px;
+    }
+
+    /* Button Styling */
+    .contact-button {
+      display: block;
+      width: 100%;
+      max-width: 200px;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #4a4ea6;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .contact-button:hover {
+      background-color: #3a3b8c;
+    }
+
+  </style>
+</head>
+<body>
+  <video class="video-background" autoplay muted loop>
+    <source src="C:/Users/user/Desktop/Background video AI info.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container">
+    <!-- Header Section with Profile Picture -->
+    <div class="header">
+      <img src="C:/Users/user/Desktop/CV/1629176131833.jpg.jpg" alt="Sipho Fako Profile Picture">
+      <h1>Sipho Fako</h1>
+
+      <h2>R150 Services</h2>
+      <div class="service-group">
+        <div class="service">
+          <h2 onclick="toggleService(0)">Resume Writing & LinkedIn Profile Optimization</h2>
+          <p class="included">Included: CV Writing, CV Optimization, LinkedIn Profile Enhancement</p>
+          <div class="service-details" id="service-0">
+            <p>With my extensive academic background and experience in information management, I can craft resumes and LinkedIn profiles that stand out. I'll tell your professional story in a compelling and strategic way to attract the right opportunities.</p>
+            <p class="added-value">Added Value: A passionate lifelong learner who applies the latest trends in branding to make your profile a powerful tool.</p>
+          </div>
+        </div>
+
+        <div class="service">
+          <h2 onclick="toggleService(1)">Content Creation & Editing</h2>
+          <p class="included">Included: Content Writing, Editing, Brand Voice</p>
+          <div class="service-details" id="service-1">
+            <p>I create and edit engaging content tailored to your brand's voice. With years of creative writing experience, I ensure your content resonates with your audience.</p>
+            <p class="added-value">Added Value: Combining creativity and detail, I deliver content that is clear, credible, and captivating.</p>
+          </div>
+        </div>
+
+        <div class="service">
+          <h2 onclick="toggleService(2)">Digital Archiving</h2>
+          <p class="included">Included: Digital Asset Management, Workflow Optimization</p>
+          <div class="service-details" id="service-2">
+            <p>I organize and maintain digital assets, ensuring secure and easy access. Whether you're a creative or corporate entity, my archiving expertise helps streamline workflows.</p>
+            <p class="added-value">Added Value: My years of experience ensure your assets are well-organized and ready for use when needed.</p>
+          </div>
+        </div>
+
+        <div class="service">
+          <h2 onclick="toggleService(3)">Client Engagement & Consulting</h2>
+          <p class="included">Included: Client Management, Business Process Optimization</p>
+          <div class="service-details" id="service-3">
+            <p>Offering tailored consulting services, I help improve client management and optimize your business processes, ensuring smooth and effective operations.</p>
+            <p class="added-value">Added Value: I bring a client-centric focus to improve communication and workflow efficiency.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>R200 Services</h2>
+      <div class="service-group">
+        <div class="service">
+          <h2 onclick="toggleService(4)">Project Management</h2>
+          <p class="included">Included: Project Coordination, Timeline Management</p>
+          <div class="service-details" id="service-4">
+            <p>Managing timelines and deliverables, I keep things organized and on track. With experience in digital archiving and content management, I excel at managing complex projects smoothly.</p>
+            <p class="added-value">Added Value: My attention to detail helps anticipate roadblocks and ensure seamless project execution.</p>
+          </div>
+        </div>
+
+        <div class="service">
+          <h2 onclick="toggleService(5)">AI-Driven Research & Strategy</h2>
+          <p class="included">Included: AI Research, Strategic Insights</p>
+          <div class="service-details" id="service-5">
+            <p>I use AI tools to provide insights that improve your business strategies. Balancing tech and creativity, I turn data into smart decisions.</p>
+            <p class="added-value">Added Value: My AI expertise brings efficiency and innovation to your business strategies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Button -->
+  <button class="contact-button" onclick="window.location.href='mailto:youremail@example.com?subject=Inquiry%20about%20services'">Send a Message</button>
+
+  <!-- Footer Section with LinkedIn and Tagline -->
+  <div class="footer">
+    <p>Transform your brand and advance your story!</p>
+    <p><a href="https://www.linkedin.com/in/sipho-fako" target="_blank">Connect with me on LinkedIn</a></p>
+  </div>
+
+  <script>
+    function toggleService(index) {
+      var serviceDetails = document.getElementById("service-" + index);
+      serviceDetails.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
